@@ -1,0 +1,31 @@
+.list {
+  display: flex;
+  flex-direction: column;
+}
+
+.item {
+  display: flex;
+  align-items: baseline;
+  width: 350px;
+  justify-content: space-between;
+}
+.contact {
+  margin-bottom: 0px;
+  font-weight: 500;
+  margin-right: 20px;
+}
+
+.button {
+  font-size: 14px;
+  margin-right: 10px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
+}
+.button:hover {
+  background-color: #3399ff;
+  outline: auto;
+  outline-color: transparent;
+  outline-style: solid;
+}

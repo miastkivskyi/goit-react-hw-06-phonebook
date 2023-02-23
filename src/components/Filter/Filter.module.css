@@ -1,0 +1,22 @@
+.container {
+  margin-top: 15px;
+  margin-left: 35px;
+  display: flex;
+  flex-direction: column;
+  font-weight: 500;
+}
+
+.inputFind {
+  width: 150px;
+  margin-top: 10px;
+  height: 20px;
+}
+
+.inputFind:focus,
+:hover {
+  border-color: #3399ff;
+  outline: auto;
+  outline-color: transparent;
+  outline-style: solid;
+  border-radius: 3px;
+}

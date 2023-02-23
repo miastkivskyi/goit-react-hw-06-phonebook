@@ -1,0 +1,37 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 350px;
+  margin-left: 40px;
+}
+
+.button {
+  font-size: 14px;
+  width: 100px;
+  margin-right: 10px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  margin-top: 25px;
+  margin-bottom: 15px;
+  padding: 5px;
+}
+.button:hover {
+  background-color: #3399ff;
+  outline: auto;
+  outline-color: transparent;
+  outline-style: solid;
+}
+
+.inputForm {
+  height: 25px;
+  width: 330px;
+}
+
+.titleForm {
+  margin-bottom: 5px;
+  margin-top: 10px;
+  font-size: 20px;
+  margin-left: 0;
+}
