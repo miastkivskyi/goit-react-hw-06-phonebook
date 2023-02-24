@@ -1,35 +1,35 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import css from './ContactList.module.css';
+import { useDispatch, useSelector } from 'react-redux';
+import { deleteUser } from '../../redux/slice';
+import { getVisibleUsers } from '../../redux/selectors';
 
-const ContactList = ({ contacts, onDelete }) => (
-  <ul className={css.list}>
-    {contacts.map(({ id, name, number }) => (
-      <li key={id} className={css.item}>
-        <p className={css.contact}>
-          {name}: {number}
-        </p>
-        <button
-          type="button"
-          onClick={() => onDelete(id)}
-          className={css.button}
-        >
-          Delete
-        </button>
-      </li>
-    ))}
-  </ul>
-);
+const ContactList = () => {
+  const contacts = useSelector(getVisibleUsers);
+  const dispatch = useDispatch();
 
-ContactList.propTypes = {
-  onDelete: PropTypes.func.isRequired,
-  contacts: PropTypes.arrayOf(
-    PropTypes.shape({
-      id: PropTypes.string.isRequired,
-      number: PropTypes.string.isRequired,
-      name: PropTypes.string.isRequired,
-    })
-  ),
+  const onDeleteUser = id => {
+    dispatch(deleteUser(id));
+  };
+
+  return (
+    <ul className={css.list}>
+      {contacts.map(({ id, name, number }) => (
+        <li key={id} className={css.item}>
+          <p className={css.contact}>
+            {name}: {number}
+          </p>
+          <button
+            type="button"
+            onClick={() => onDeleteUser(id)}
+            className={css.button}
+          >
+            Delete
+          </button>
+        </li>
+      ))}
+    </ul>
+  );
 };
 
 export default ContactList;

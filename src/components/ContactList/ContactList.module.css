@@ -1,31 +1,31 @@
 .list {
   display: flex;
   flex-direction: column;
+  width: 630px;
 }
 
 .item {
   display: flex;
-  align-items: baseline;
-  width: 350px;
+  align-items: center;
   justify-content: space-between;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
 }
 .contact {
-  margin-bottom: 0px;
-  font-weight: 500;
-  margin-right: 20px;
+  font-size: 16px;
+  font-weight: bold;
+  margin-right: 10px;
 }
 
 .button {
-  font-size: 14px;
-  margin-right: 10px;
-  cursor: pointer;
+  background-color: #f44336;
+  color: #fff;
   border: none;
-  border-radius: 5px;
-  padding: 5px;
+  border-radius: 4px;
+  padding: 8px 16px;
+  font-size: 16px;
+  cursor: pointer;
 }
 .button:hover {
-  background-color: #3399ff;
-  outline: auto;
-  outline-color: transparent;
-  outline-style: solid;
+  background-color: #d32f2f;
 }
